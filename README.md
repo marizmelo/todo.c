@@ -23,7 +23,7 @@ That is it, you are ready to go ;)
 	done       followed by todo's ID number, marks todo as completed
 	del       followed by todo's ID number, remove todo from current list
 	clean      deletes all list of todos ***USE WITH MODERATION***
- 	uninstall  remove TODO application
+	uninstall  remove TODO application
 	help       display a quick command reference for the system
 
 ##Dependencies
