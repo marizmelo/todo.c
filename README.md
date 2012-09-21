@@ -21,7 +21,7 @@ That is it, you are ready to go ;)
 	-          display only completed todos
 	add        followed by QUOTED string (ex.:"my new todo") includes a new todo
 	done       followed by todo's ID number, marks todo as completed
-	del       followed by todo's ID number, remove todo from current list
+	del        followed by todo's ID number, remove todo from current list
 	clean      deletes all list of todos ***USE WITH MODERATION***
 	uninstall  remove TODO application
 	help       display a quick command reference for the system
@@ -37,4 +37,5 @@ All tools used to build __todo__ can be found in most of the X (linux/unix) dist
 Future features that I want to add to the project
 
 	1. LISTS - create multiple lists for your todos
+	2. SWAP  - change position between items of status "+" (todo)
 
