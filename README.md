@@ -29,6 +29,6 @@ That is it, you are ready to go ;)
 ##Dependencies
 All tools used to build __todo__ can be found in most of the X (linux/unix) distribution, but just to let you know, I am using:
 
-        gcc        C programing language compiler
+	gcc        C programing language compiler
 	sed        powerful string pre-processor 
 	awk        another powerful pre-processor
