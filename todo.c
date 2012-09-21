@@ -29,7 +29,7 @@ int main ( int argc, char *argv[] ){
 	if(argv[1]){
 		//if argument is "-" show only completed todos
 		if(strcmp(argv[1],"-")==0){
-			showCompleted();i
+			showCompleted();
 		//else argument is "+" show only active todos
 		}else if(strcmp(argv[1],"+")==0){
 			showTodos();
@@ -167,7 +167,9 @@ void showHelp(){
 	printf(" add\tfollowed by QUOTED string (ex.:\"my new todo\") includes a new todo\n");
 	printf(" done\tfollowed by todo's ID number, marks todo as completed\n");
 	printf(" del\tfollowed by todo's ID number, remove todo from current list\n");
-	printf(" clean\tdeletes all list of todos ***USE WITH MODERATION***\n\n");
+	printf(" clean\tdeletes all list of todos ***USE WITH MODERATION***\n");
+	printf(" uninstall\tremove TODO application\n");
+	printf(" help\tdisplay a quick command reference for the system\n\n");
 }//showHelp()
 
 //UNINSTALL TODO SYSTEM
