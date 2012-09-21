@@ -1,0 +1,26 @@
+
+ TODO - command line todo list MM (c) 2012
+===========================================
+##Installation
+You may need to give execution permission for the installation script, type this:
+
+        chmod +x install.sh
+
+Execute the installation script typing the following command:
+        
+        sudo ./install.sh
+
+That is it, you are ready to go ;)
+
+##Usage
+    todo [option] <string>
+
+##List of options
+
+ 	+        displays only active todos
+ 	-        display only completed todos
+ 	add      followed by QUOTED string (ex.:"my new todo") includes a new todo
+ 	done     followed by todo's ID number, marks todo as completed
+ 	delq     followed by todo's ID number, remove todo from current list
+ 	clean    deletes all list of todos ***USE WITH MODERATION***
+
