@@ -24,4 +24,4 @@ That is it, you are ready to go ;)
  	delq       followed by todo's ID number, remove todo from current list
  	clean      deletes all list of todos ***USE WITH MODERATION***
 	uninstall  remove TODO application
-        printf     help\tdisplay a quick command reference for the system
+        help       display a quick command reference for the system
