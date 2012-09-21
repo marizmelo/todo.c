@@ -34,8 +34,14 @@ All tools used to build __todo__ can be found in most of the X (linux/unix) dist
 	awk        another powerful pre-processor
 
 ##Todos
-Future features that I want to add to the project
+Future features that I am planning add to the project
 
-	1. LISTS - create multiple lists for your todos
-	2. SWAP  - change position between items of status "+" (todo)
+	1. LISTS  - create multiple lists for your todos
+	2. SWAP   - change position between items of status "+" (todo)
+	3. TOP    - send item with status + to the top of the list
+	4. BOTTOM - send item with status + to the top of the list
+	5. UP     - send item up one position
+	6. DOWN   - send item down one position
+	7. AT	  - include crontab job to alert about todo on specified date
+	8. on	  - include date when todo was completed
 
