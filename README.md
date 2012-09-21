@@ -32,3 +32,9 @@ All tools used to build __todo__ can be found in most of the X (linux/unix) dist
 	gcc        C programing language compiler
 	sed        powerful string pre-processor 
 	awk        another powerful pre-processor
+
+##Todos
+Future features that I want to add to the project
+
+	1. LISTS - create multiple lists for your todos
+
