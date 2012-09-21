@@ -164,7 +164,7 @@ void showHelp(){
 	printf("\n List of options\n\n");
 	printf(" +\tdisplays only active todos\n");
 	printf(" -\tdisplay only completed todos\n");
-	printf(" add\tfollowed by QUOTED string (ex.:\"my new todo\") includes a new todo on top of the current list\n");
+	printf(" add\tfollowed by QUOTED string (ex.:\"my new todo\") includes a new todo\n");
 	printf(" done\tfollowed by todo's ID number, marks todo as completed\n");
 	printf(" del\tfollowed by todo's ID number, remove todo from current list\n");
 	printf(" clean\tdeletes all list of todos ***USE WITH MODERATION***\n\n");
