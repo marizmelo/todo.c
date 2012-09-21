@@ -4,11 +4,11 @@
 ##Installation
 You may need to give execution permission for the installation script, type this:
 
-        chmod +x install.sh
+	chmod +x install.sh
 
 Execute the installation script typing the following command:
         
-        sudo ./install.sh
+	sudo ./install.sh
 
 That is it, you are ready to go ;)
 
