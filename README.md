@@ -43,5 +43,5 @@ Future features that I am planning add to the project
 	5. UP     - send item up one position
 	6. DOWN   - send item down one position
 	7. AT	  - include crontab job to alert about todo on specified date
-	8. on	  - include date when todo was completed
+	8. on	  - include date when todo is completed
 
