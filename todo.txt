@@ -1,0 +1,93 @@
+/*
+	TODO.SH MM © 2012
+	- add reminder date to todo (use crontab)
+	- email alerts (.config file)
+	- LISTS
+*/
+
+//Initial syntax
+- what is going on
++ completed
+
+
+//adding todo
+todo add "what we are going todo today"
+--->
+ 1.[ ] what we are going todo today
+
+//done todo
+todo done 1
+--->
+ 1.[x] what we are going todo today
+
+
+//list todos
+todo show
+--->
+ 1.[ ] what we are going todo today
+
+
+
+TODOS:
+
+//creating lists
+todo list mylist
+--->
+ 	/mylist
+
+//add to list
+todo add list mylist "what is going on"
+--->
+	/myList
+		1.[ ] what is going on
+
+//show lists
+todo show lists
+--->
+	/myList
+
+
+
+PROGRAMING
+==============================
+//showing all the todos
+$cat -n todos
+
+//showing only incomplete todos
+$cat -n file | awk '/[0-9]\t\+/'
+
+//showing only completed todos
+$cat -n file | awk '/[0-9]\t\-/'
+
+//adding new todo
+//ex: $todo add "new todo"
+$echo + new todo inserted" > tmp; cat file >> tmp; cat tmp > file
+
+//mark as completed (use the todo line number)
+//ex: $todo complete 1
+$sed -n 1p file | sed 's/^\+/\-/' >> file; sed 1d file > tmp; cat tmp > file
+
+//removing todo
+//ex: $todo del 1
+$sed -e '2d' file > tmp; cat tmp > file
+
+//create new list
+ex: todo new <list name>
+
+//list all lists
+ex: todo list
+
+//create new list
+ex: todo list "new list"
+
+//delete list
+ex: todo list del 1 //id of list
+
+//change from one list to another
+ex: todo use <list name>
+
+* put "*" on current list in use (config file)
+
+
+//change todo text
+ex: todo edit 1 "new text"

@@ -50,7 +50,10 @@ int main ( int argc, char *argv[] ){
 			showHelp();
 		}else if(strcmp(argv[1],"uninstall")==0){
 			uninstallTodo();
-		}else{
+        //else if second argument is "list", create list with selected name
+		}else if(strcomp(argv[1],"list")==0 && argv[2]){
+            createList(argv[2]);
+        }else{
 			showAll();
 		}//if_else	
 	}else{
