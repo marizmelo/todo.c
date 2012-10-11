@@ -22,6 +22,7 @@ void deleteTodo(char todo[]);
 void deleteTodos();
 void showHelp();
 void uninstallTodo();
+void createList(char list[]);
 
 //MAIN PROGRAM
 int main ( int argc, char *argv[] ){
@@ -51,7 +52,7 @@ int main ( int argc, char *argv[] ){
 		}else if(strcmp(argv[1],"uninstall")==0){
 			uninstallTodo();
         //else if second argument is "list", create list with selected name
-		}else if(strcomp(argv[1],"list")==0 && argv[2]){
+		}else if(strcmp(argv[1],"list")==0 && argv[2]){
             createList(argv[2]);
         }else{
 			showAll();
@@ -158,6 +159,11 @@ void deleteTodos(){
 	system(buf);
 	return;
 }//deleteTodos()
+
+//CREATE LISTS
+void createList(char list[]){
+    
+}
 
 //SHOW SYSTEM HELP
 void showHelp(){
