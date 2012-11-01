@@ -2,6 +2,7 @@
  	TODOS - todo list in your terminal
 	created by MarizMelo (c) 2012
 	http://github/jmarizgit/todo.c
+	version 1.0
 */
 
 //LIBRARIES
@@ -183,7 +184,6 @@ void showHelp(){
 	printf(" --------------------------------------------\n\n");
 	printf(" Usage:\ttodo [option] <string>\n");
 	printf("\n List of options\n\n");
-	printf(" init\tstart todo list on current directory");
 	printf(" +\tdisplays only active todos\n");
 	printf(" -\tdisplay only completed todos\n");
 	printf(" add\tfollowed by QUOTED string (ex.:\"my new todo\") includes a new todo\n");
