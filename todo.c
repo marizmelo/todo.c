@@ -196,5 +196,5 @@ void showHelp(){
 
 //UNINSTALL TODO SYSTEM
 void uninstallTodo(){
-	system("/usr/local/todo/./remove.sh");
+	system("/usr/local/todo/./uninstall.sh");
 }//uninstallTodo()
