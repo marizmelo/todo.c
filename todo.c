@@ -94,7 +94,7 @@ void showTodos(){
 
 //ADD NEW TODO
 void addTodo(char todo[]){
-	char buf[200];
+	char buf[400];
 	strcpy(buf, "echo \"+ ");
 	strcat(buf, todo);
 	strcat(buf, "\" > ");
