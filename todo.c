@@ -9,10 +9,11 @@
 #include <string.h>
 
 //CONSTANTS
-#define PATH "/usr/local/todo/file" 
-#define TEMP "/usr/local/todo/tmp"
+#define PATH "./.todo_file" 
+#define TEMP "./.todo_tmp"
 
 //FUNCTIONS
+void fileExists();
 void showAll();
 void showCompleted();
 void showTodos();
@@ -63,8 +64,19 @@ int main ( int argc, char *argv[] ){
 	return 0;
 }//main
 
+//VERIFY IF FILE EXISTS
+void fileExists()
+{
+	FILE* file;
+    if ( file = fopen(PATH, "a"))
+    {
+        fclose(file);
+    }
+}//fileExists()
+
 //DISPLAY ALL TODOS
 void showAll(){
+	fileExists();
 	char buf[100];
 	strcpy(buf,"cat -n ");
 	strcat(buf, PATH);
@@ -171,6 +183,7 @@ void showHelp(){
 	printf(" --------------------------------------------\n\n");
 	printf(" Usage:\ttodo [option] <string>\n");
 	printf("\n List of options\n\n");
+	printf(" init\tstart todo list on current directory");
 	printf(" +\tdisplays only active todos\n");
 	printf(" -\tdisplay only completed todos\n");
 	printf(" add\tfollowed by QUOTED string (ex.:\"my new todo\") includes a new todo\n");
