@@ -13,6 +13,8 @@ Execute the installation script typing the following command:
 That is it, you are ready to go ;)
 
 ##Usage
+TODO is projected to work on your local directories. When you run **todo** in your current directory a **".todo_file"** will be created where all your todos will be saved.
+    
     todo [option] <string>
 
 ##List of options
