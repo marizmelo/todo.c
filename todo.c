@@ -67,7 +67,7 @@ int main ( int argc, char *argv[] ){
 	}else if(argv[1] && strcmp(argv[1],"init")==0){
 		init();
 	}else{
-		printf("\nTODO repository do not exist\nTry use 'todo init'\n\n");
+		printf("\nTODO repository do not exist\nTry use - todo init\n\n");
 	}//if_else
 	return 0;
 }//main
@@ -117,7 +117,7 @@ void showAll(){
 		strcat(buf, PATH);
 		system(buf);
 	}else{
-		printf("\nNo todos on the list\nTry use 'todo add \"todo name\"\n\n");
+		printf("\nNo todos on the list\nTry use - todo add \"todo name\"\n\n");
 	}//if
 	return;
 }//showAll()
