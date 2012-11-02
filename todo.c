@@ -27,7 +27,7 @@ void uninstallTodo();
 
 //MAIN PROGRAM
 int main ( int argc, char *argv[] ){
-	fileExists(); //checking for file existence
+	fileExists();
 	//if user write an argument on command
 	if(argv[1]){
 		//if argument is "-" show only completed todos
@@ -54,9 +54,7 @@ int main ( int argc, char *argv[] ){
 		}else if(strcmp(argv[1],"uninstall")==0){
 			uninstallTodo();
         //else if second argument is "list", create list with selected name
-		}else if(strcmp(argv[1],"list")==0 && argv[2]){
-            createList(argv[2]);
-        }else{
+		}else{
 			showAll();
 		}//if_else	
 	}else{
@@ -171,7 +169,6 @@ void deleteTodos(){
 	system(buf);
 	return;
 }//deleteTodos()
-
 
 //SHOW SYSTEM HELP
 void showHelp(){
