@@ -2,7 +2,7 @@
  	TODOS - todo list in your terminal
 	created by MarizMelo (c) 2012
 	http://github/jmarizgit/todo.c
-	version 1.0
+	version 1.0.1
 */
 
 //LIBRARIES
@@ -13,8 +13,12 @@
 #define PATH "./.todo_file" 
 #define TEMP "./.todo_tmp"
 
+//TYPEDEFS
+typedef enum { false, true } bool;
+
 //FUNCTIONS
-void fileExists();
+void init();
+bool fileExists();
 void showAll();
 void showCompleted();
 void showTodos();
@@ -27,9 +31,9 @@ void uninstallTodo();
 
 //MAIN PROGRAM
 int main ( int argc, char *argv[] ){
-	fileExists();
+	bool exists = fileExists();
 	//if user write an argument on command
-	if(argv[1]){
+	if(argv[1] && exists){
 		//if argument is "-" show only completed todos
 		if(strcmp(argv[1],"-")==0){
 			showCompleted();
@@ -57,19 +61,34 @@ int main ( int argc, char *argv[] ){
 		}else{
 			showAll();
 		}//if_else	
-	}else{
+	}else if(exists){
 		showAll();
+	}else{
+		printf("\nTry to 'todo init' to initialize your todo list.\n");
+		showHelp();
 	}//if_else
 	return 0;
 }//main
 
-//VERIFY IF FILE EXISTS
-void fileExists()
-{
+//CREATE TODO FILESYSTEM
+void init(){
 	FILE* file;
-    if ( file = fopen(PATH, "a"))
+	if ( file = fopen(PATH, "r"))
     {
         fclose(file);
+    }
+}//init()
+
+//VERIFY IF FILE EXISTS
+bool fileExists()
+{
+	FILE* file;
+    if ( file = fopen(PATH, "r"))
+    {
+        fclose(file);
+        return true;
+    }else{
+    	return false;
     }
 }//fileExists()
 
@@ -176,6 +195,7 @@ void showHelp(){
 	printf(" --------------------------------------------\n\n");
 	printf(" Usage:\ttodo [option] <string>\n");
 	printf("\n List of options\n\n");
+	printf(" init\tstarts todo list on current folder\n");
 	printf(" +\tdisplays only active todos\n");
 	printf(" -\tdisplay only completed todos\n");
 	printf(" add\tfollowed by QUOTED string (ex.:\"my new todo\") includes a new todo\n");
@@ -184,9 +204,11 @@ void showHelp(){
 	printf(" clean\tdeletes all list of todos ***USE WITH MODERATION***\n");
 	printf(" uninstall\tremove TODO application\n");
 	printf(" help\tdisplay a quick command reference for the system\n\n");
+	return;
 }//showHelp()
 
 //UNINSTALL TODO SYSTEM
 void uninstallTodo(){
 	system("/usr/local/todo/./uninstall.sh");
+	return;
 }//uninstallTodo()
