@@ -78,6 +78,7 @@ void init(){
     {
         fclose(file);
     }
+    printf(".todo_file created!\n");
 }//init()
 
 //VERIFY IF FILE EXISTS
