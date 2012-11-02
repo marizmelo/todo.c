@@ -19,6 +19,7 @@ typedef enum { false, true } bool;
 //FUNCTIONS
 void init();
 bool fileExists();
+bool emptyFile();
 void showAll();
 void showCompleted();
 void showTodos();
@@ -66,7 +67,7 @@ int main ( int argc, char *argv[] ){
 	}else if(argv[1] && strcmp(argv[1],"init")==0){
 		init();
 	}else{
-		showHelp();
+		printf("\nTODO repository do not exist\nTry use 'todo init'\n\n");
 	}//if_else
 	return 0;
 }//main
@@ -78,7 +79,7 @@ void init(){
     {
         fclose(file);
     }
-    printf(".todo_file created!\n");
+    printf("\nTODO repository created!\n\n");
 }//init()
 
 //VERIFY IF FILE EXISTS
@@ -94,12 +95,30 @@ bool fileExists()
     }
 }//fileExists()
 
+//CHECK EMPTY FILE
+bool emptyFile(){
+	FILE* file;
+	file = fopen (PATH,"rb");
+	fseek(file, 0L, SEEK_END);
+	if (ftell(file) == 0){
+		fclose(file);
+		return true;
+	}else{
+		fclose(file);
+		return false;
+	}//if_else
+}//emptyFile()
+
 //DISPLAY ALL TODOS
 void showAll(){
 	char buf[100];
-	strcpy(buf,"cat -n ");
-	strcat(buf, PATH);
-	system(buf);
+	if(!emptyFile()){
+		strcpy(buf,"cat -n ");
+		strcat(buf, PATH);
+		system(buf);
+	}else{
+		printf("\nNo todos on the list\nTry use 'todo add \"todo name\"\n\n");
+	}//if
 	return;
 }//showAll()
 
