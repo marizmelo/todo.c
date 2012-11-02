@@ -66,7 +66,6 @@ int main ( int argc, char *argv[] ){
 	}else if(argv[1] && strcmp(argv[1],"init")==0){
 		init();
 	}else{
-		printf("\nTry to 'todo init' to initialize your todo list.\n");
 		showHelp();
 	}//if_else
 	return 0;
