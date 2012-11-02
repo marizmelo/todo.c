@@ -63,6 +63,8 @@ int main ( int argc, char *argv[] ){
 		}//if_else	
 	}else if(exists){
 		showAll();
+	}else if(argv[1] && strcmp(argv[1],"init")==0){
+		init();
 	}else{
 		printf("\nTry to 'todo init' to initialize your todo list.\n");
 		showHelp();
@@ -73,7 +75,7 @@ int main ( int argc, char *argv[] ){
 //CREATE TODO FILESYSTEM
 void init(){
 	FILE* file;
-	if ( file = fopen(PATH, "r"))
+	if ( file = fopen(PATH, "a"))
     {
         fclose(file);
     }
