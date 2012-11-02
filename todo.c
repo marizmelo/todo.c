@@ -24,7 +24,6 @@ void deleteTodo(char todo[]);
 void deleteTodos();
 void showHelp();
 void uninstallTodo();
-void createList(char list[]);
 
 //MAIN PROGRAM
 int main ( int argc, char *argv[] ){
@@ -173,10 +172,6 @@ void deleteTodos(){
 	return;
 }//deleteTodos()
 
-//CREATE LISTS
-void createList(char list[]){
-    
-}
 
 //SHOW SYSTEM HELP
 void showHelp(){
