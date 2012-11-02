@@ -27,6 +27,7 @@ void uninstallTodo();
 
 //MAIN PROGRAM
 int main ( int argc, char *argv[] ){
+	fileExists(); //checking for file existence
 	//if user write an argument on command
 	if(argv[1]){
 		//if argument is "-" show only completed todos
@@ -76,7 +77,6 @@ void fileExists()
 
 //DISPLAY ALL TODOS
 void showAll(){
-	fileExists();
 	char buf[100];
 	strcpy(buf,"cat -n ");
 	strcat(buf, PATH);
