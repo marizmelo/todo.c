@@ -2,5 +2,4 @@ language: c
 compiler: 
 	- "clang"
 	- "gcc"
-
-script: "./script/ci/install.sh"
+script: "sudo install.sh"
