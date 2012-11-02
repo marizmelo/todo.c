@@ -38,12 +38,13 @@ All tools used to build __todo__ can be found in most of the X (linux/unix) dist
 ##Todos
 Future features that I am planning add to the project
 
-	1. SWAP   - change position between items of status "+" (todo)
-	2. TOP    - send item with status + to the top of the list
-	3. BOTTOM - send item with status + to the top of the list
-	4. UP     - send item up one position
-	5. DOWN   - send item down one position
-	6. AT	  - include crontab job to alert about todo on specified date
+	1. swap   - change position between items of status "+" (todo)
+	2. top    - send item with status + to the top of the list
+	3. bottom - send item with status + to the top of the list
+	4. up     - send item up one position
+	5. down   - send item down one position
+	6. at	  - include crontab job to alert about todo on specified date
 	7. on	  - include date when todo is completed
 	8. mail	  - send todo list to email address
+	9. create test and installation script with MAKE
 
