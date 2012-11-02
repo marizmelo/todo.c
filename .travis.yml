@@ -1,3 +1,6 @@
 language: c
-compiler: gcc
-script: ./script/ci/install.sh
+compiler: 
+	- "clang"
+	- "gcc"
+
+script: "./script/ci/install.sh"
