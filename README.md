@@ -47,4 +47,5 @@ Future features that I am planning add to the project
 	7. on	  - include date when todo is completed
 	8. mail	  - send todo list to email address
 	9. create test and installation script with MAKE
+    10.attach - (todo 1 attach [path to file]) will attach file to todo item, how display attachements?
 
