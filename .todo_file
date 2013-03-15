@@ -1,0 +1,14 @@
++ undone - remove date of completion
++ done - add date when task was completed
++ undone command
++ maybe create cronjob tasks
++ create test and installation script with MAKE
++ mail   - send todo list to email address
++ on     - include date when todo is completed
++ at     - include crontab job to alert about todo on specified date
++ down   - send item down one position
++ up     - send item up one position
++ bottom - send item with status + to the top of the list
++ top    - send item with status + to the top of the list
++ swap   - change position between items of status + (todo)
++ create nodejs version and push to npm repository
